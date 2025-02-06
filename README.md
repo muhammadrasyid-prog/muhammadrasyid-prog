@@ -13,6 +13,8 @@ Here are some ideas to get you started:
 - 📫 How to reach me: ...
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
+-  ![Snake animation](https://github.com/muhammadrasyid-prog/muhammadrasyid-prog/blob/output/github-contribution-grid-snake.svg)
 -->
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=muhammadrasyid-prog)](https://github.com/muhammadrasyid-prog/github-readme-stats)
-![Snake animation](https://github.com/muhammadrasyid-prog/muhammadrasyid-prog/blob/output/github-contribution-grid-snake.svg)
+
+![Snake animation](https://raw.githubusercontent.com/muhammadrasyid-prog/muhammadrasyid-prog/output/github-contribution-grid-snake.svg)
