@@ -1,23 +1,27 @@
-name: Generate Datas
+name: Generate Snake Animation
 on:
-  schedule: # execute every 12 hours
-    - cron: "* */12 * * *"
-  workflow_dispatch:
+  schedule:
+    - cron: "0 */12 * * *"  # Menjalankan setiap 12 jam
+  workflow_dispatch:  # Bisa dijalankan secara manual
+
 jobs:
   build:
-    name: Jobs to update datas
+    name: Generate Snake
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write  # Memberikan izin menulis ke repo
     steps:
-      # Snake Animation
-      - uses: Platane/snk@master
-        id: snake-gif
+      - name: Generate Snake Animation
+        uses: Platane/snk@v3
         with:
-          github_user_name: muhammadrasyid-prog
-          svg_out_path: dist/github-contribution-grid-snake.svg
+          github_user_name: ${{ github.muhammadrasyid-prog }}
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+            dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
 
-      - uses: crazy-max/ghaction-github-pages@v2.1.3  # Deploy ke GitHub Pages
+      - name: Push to output branch
+        uses: crazy-max/ghaction-github-pages@v2.1.3
         with:
           target_branch: output
           build_dir: dist
